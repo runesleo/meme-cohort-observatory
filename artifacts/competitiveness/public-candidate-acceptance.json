@@ -1,0 +1,61 @@
+{
+  "candidate_commit": "2a22fb9213d6db6c835b08af8024dac3a8d750ca",
+  "competitiveness": {
+    "demonstrated_differentiators": [
+      "comparable cohort admission",
+      "inclusion probability/sample fraction",
+      "coverage completeness/fail-closed denominator",
+      "anchored lifecycle with missed-slot accounting",
+      "MCAP/FDV track separation",
+      "ever-observed vs explicit transition semantics",
+      "offline replay"
+    ],
+    "fixed_forward_case": {
+      "mco_retained_admission_n": 5,
+      "mco_total_missed_slots": 10,
+      "naive_current_any_pair": 5,
+      "naive_current_positive_pair": 1,
+      "naive_current_usable_valuation": 0,
+      "selected_n": 5
+    },
+    "historical_comparable_cohort_n": 698,
+    "raw_discovery_is_commodity": true,
+    "survival_analytics_is_crowded": true
+  },
+  "date": "2026-09-03",
+  "external_actions": {
+    "account": false,
+    "deploy": false,
+    "funds": false,
+    "hackathon_submission": false,
+    "public_repo": false,
+    "push": false,
+    "release": false,
+    "remote_configured": false,
+    "wallet": false
+  },
+  "license_provenance": {
+    "declared_license": "MIT",
+    "legal_authorship_opinion": false,
+    "third_party_license_markers_found_in_reviewed_surface": false,
+    "user_confirmation_required_before_public_push": true
+  },
+  "next_gate": "Leo confirms ownership/license and explicitly approves first public GitHub creation/push; until then local-only.",
+  "positioning": "coverage-aware replayable cohort research CLI; not a meme alpha scanner",
+  "schema": "mco_public_candidate_acceptance.v1",
+  "stage_b_acceptance": "9de74bc67bead8d7dbaaf755ecc6fe4fcc2bda35",
+  "stage_b_implementation": "4d6250c17cdf0d66117dc50c1831f2118832c8a3",
+  "validation": {
+    "clean_clone_stage_b": "PASS",
+    "doctor_trade_surface": false,
+    "doctor_wallet_surface": false,
+    "public_surface_audit": "PASS",
+    "root_help_all_five_commands": true,
+    "tests": "108/108 PASS",
+    "wheel": "meme_cohort_observatory-0.1.0-py3-none-any.whl",
+    "wheel_dangerous_paths": [],
+    "wheel_fixture_collect_report_doctor": "PASS",
+    "wheel_install_clean_venv": "PASS"
+  },
+  "verdict": "PUBLIC_CANDIDATE"
+}
