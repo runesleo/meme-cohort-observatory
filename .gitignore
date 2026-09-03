@@ -5,7 +5,17 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.session
+*.log
 state/
+output/
+reports/
+*.sqlite
+*.sqlite-*
 *.sqlite3
 *.sqlite3-*
 latest_summary.json
