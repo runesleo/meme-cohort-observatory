@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-03",
+  "external_actions": {
+    "account": false,
+    "deploy": false,
+    "funds": false,
+    "publish": false,
+    "push": false,
+    "remote": false,
+    "wallet": false
+  },
+  "features": {
+    "checkpoint_ages": [
+      "10m",
+      "1h",
+      "1d",
+      "7d"
+    ],
+    "ever_observed_vs_transition_separate": true,
+    "formal_confidence_interval_claimed": false,
+    "inspect_token": true,
+    "lifecycle_report": true,
+    "market_cap_fdv_separate": true,
+    "trade_surface": false
+  },
+  "implementation_commit": "4d6250c17cdf0d66117dc50c1831f2118832c8a3",
+  "not_proven": [
+    "7d observation coverage in current historical state",
+    "formal statistical confidence intervals",
+    "external user value",
+    "paid demand",
+    "strategy profitability",
+    "hackathon competitiveness"
+  ],
+  "schema": "mco_stage_b_acceptance.v1",
+  "status": "LOCAL_STAGE_B_FUNCTIONAL_DATA_QUALITY_VISIBLE_NOT_PUBLIC_READY",
+  "validation": {
+    "clean_clone": true,
+    "console_script": true,
+    "current_non_cherry_picked_bsc": {
+      "checkpoint_10m_fdv_observed": 5,
+      "cohort_n": 10,
+      "fdv_track_n": 10,
+      "mcap_track_n": 1,
+      "total_missed_slots": 10
+    },
+    "deterministic_case": {
+      "checkpoint_10m_median_lag_minutes": 5.0,
+      "checkpoint_7d_observed": 0,
+      "cohort_n": 2,
+      "mcap_ever_ge_1m": 1,
+      "mcap_transition_events_1m": 1,
+      "transition_age_minutes": 65.0
+    },
+    "editable_install": true,
+    "historical_real_state": {
+      "base_cohort_n": 613,
+      "base_mcap_ever_ge_1m": 6,
+      "base_mcap_track_n": 429,
+      "base_mcap_transition_events_1m": 2,
+      "base_total_missed_slots": 2518,
+      "bsc_cohort_n": 85,
+      "bsc_mcap_ever_ge_1m": 2,
+      "bsc_mcap_track_n": 21,
+      "cohort_n": 698
+    },
+    "public_surface_audit": "PASS",
+    "tests": "107/107 PASS"
+  }
+}

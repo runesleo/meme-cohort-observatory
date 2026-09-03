@@ -1,0 +1,353 @@
+{
+  "chains": {
+    "base": {
+      "admission": {
+        "formal_confidence_interval": null,
+        "inclusion_probability_max": 1.0,
+        "inclusion_probability_median": 0.8333,
+        "inclusion_probability_min": 0.10638297872340426,
+        "sample_fraction_median": 0.8333
+      },
+      "checkpoints": {
+        "10m": {
+          "fdv": {
+            "cohort_n": 613,
+            "median_lag_minutes": 6.129,
+            "median_multiple_from_same_kind_admission": 1.0,
+            "observed": 273,
+            "observed_rate": 0.4461,
+            "track_n": 612
+          },
+          "market_cap": {
+            "cohort_n": 613,
+            "median_lag_minutes": 8.591,
+            "median_multiple_from_same_kind_admission": 1.514,
+            "observed": 429,
+            "observed_rate": 1.0,
+            "track_n": 429
+          }
+        },
+        "1d": {
+          "fdv": {
+            "cohort_n": 613,
+            "median_lag_minutes": 1554.698,
+            "median_multiple_from_same_kind_admission": 885.5579,
+            "observed": 2,
+            "observed_rate": 0.0033,
+            "track_n": 612
+          },
+          "market_cap": {
+            "cohort_n": 613,
+            "median_lag_minutes": 124.345,
+            "median_multiple_from_same_kind_admission": 2.2372,
+            "observed": 136,
+            "observed_rate": 0.317,
+            "track_n": 429
+          }
+        },
+        "1h": {
+          "fdv": {
+            "cohort_n": 613,
+            "median_lag_minutes": 17.249,
+            "median_multiple_from_same_kind_admission": 1.0,
+            "observed": 7,
+            "observed_rate": 0.0114,
+            "track_n": 612
+          },
+          "market_cap": {
+            "cohort_n": 613,
+            "median_lag_minutes": 7.369,
+            "median_multiple_from_same_kind_admission": 1.7029,
+            "observed": 375,
+            "observed_rate": 0.8741,
+            "track_n": 429
+          }
+        },
+        "7d": {
+          "fdv": {
+            "cohort_n": 613,
+            "median_lag_minutes": null,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 0,
+            "observed_rate": 0.0,
+            "track_n": 612
+          },
+          "market_cap": {
+            "cohort_n": 613,
+            "median_lag_minutes": null,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 0,
+            "observed_rate": 0.0,
+            "track_n": 429
+          }
+        }
+      },
+      "comparable_cohort_n": 613,
+      "crossings": {
+        "fdv": {
+          "RAW_C10_CROSSING": {
+            "cohort_n": 613,
+            "crossed": 0,
+            "ever_observed_ge": 1,
+            "ever_observed_rate": 0.0016,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 612,
+            "transition_events": 0
+          },
+          "RAW_C1_CROSSING": {
+            "cohort_n": 613,
+            "crossed": 2,
+            "ever_observed_ge": 3,
+            "ever_observed_rate": 0.0049,
+            "latencies_minutes": [
+              49.077,
+              1110.767
+            ],
+            "median_minutes_since_pool_created": 579.922,
+            "observed_rate": 0.0033,
+            "track_n": 612,
+            "transition_events": 2
+          },
+          "RAW_C3_CROSSING": {
+            "cohort_n": 613,
+            "crossed": 0,
+            "ever_observed_ge": 1,
+            "ever_observed_rate": 0.0016,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 612,
+            "transition_events": 0
+          }
+        },
+        "market_cap": {
+          "RAW_C10_CROSSING": {
+            "cohort_n": 613,
+            "crossed": 3,
+            "ever_observed_ge": 5,
+            "ever_observed_rate": 0.0117,
+            "latencies_minutes": [
+              2254.799,
+              3186.553,
+              3549.22
+            ],
+            "median_minutes_since_pool_created": 3186.553,
+            "observed_rate": 0.007,
+            "track_n": 429,
+            "transition_events": 3
+          },
+          "RAW_C1_CROSSING": {
+            "cohort_n": 613,
+            "crossed": 2,
+            "ever_observed_ge": 6,
+            "ever_observed_rate": 0.014,
+            "latencies_minutes": [
+              3186.553,
+              3549.22
+            ],
+            "median_minutes_since_pool_created": 3367.8865,
+            "observed_rate": 0.0047,
+            "track_n": 429,
+            "transition_events": 2
+          },
+          "RAW_C3_CROSSING": {
+            "cohort_n": 613,
+            "crossed": 3,
+            "ever_observed_ge": 5,
+            "ever_observed_rate": 0.0117,
+            "latencies_minutes": [
+              2254.799,
+              3186.553,
+              3549.22
+            ],
+            "median_minutes_since_pool_created": 3186.553,
+            "observed_rate": 0.007,
+            "track_n": 429,
+            "transition_events": 3
+          }
+        }
+      },
+      "refresh_quality": {
+        "max_missed_slots": 15,
+        "median_missed_slots": 3.0,
+        "tokens_with_missed_slots": 603,
+        "total_missed_slots": 2518
+      }
+    },
+    "bsc": {
+      "admission": {
+        "formal_confidence_interval": null,
+        "inclusion_probability_max": 0.7142857142857143,
+        "inclusion_probability_median": 0.1923,
+        "inclusion_probability_min": 0.043478260869565216,
+        "sample_fraction_median": 0.1923
+      },
+      "checkpoints": {
+        "10m": {
+          "fdv": {
+            "cohort_n": 85,
+            "median_lag_minutes": 6.818,
+            "median_multiple_from_same_kind_admission": 1.0,
+            "observed": 37,
+            "observed_rate": 0.4353,
+            "track_n": 85
+          },
+          "market_cap": {
+            "cohort_n": 85,
+            "median_lag_minutes": 9.15,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 21,
+            "observed_rate": 1.0,
+            "track_n": 21
+          }
+        },
+        "1d": {
+          "fdv": {
+            "cohort_n": 85,
+            "median_lag_minutes": null,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 0,
+            "observed_rate": 0.0,
+            "track_n": 85
+          },
+          "market_cap": {
+            "cohort_n": 85,
+            "median_lag_minutes": 16.5185,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 10,
+            "observed_rate": 0.4762,
+            "track_n": 21
+          }
+        },
+        "1h": {
+          "fdv": {
+            "cohort_n": 85,
+            "median_lag_minutes": 300.561,
+            "median_multiple_from_same_kind_admission": 1.7293,
+            "observed": 1,
+            "observed_rate": 0.0118,
+            "track_n": 85
+          },
+          "market_cap": {
+            "cohort_n": 85,
+            "median_lag_minutes": 5.152,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 15,
+            "observed_rate": 0.7143,
+            "track_n": 21
+          }
+        },
+        "7d": {
+          "fdv": {
+            "cohort_n": 85,
+            "median_lag_minutes": null,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 0,
+            "observed_rate": 0.0,
+            "track_n": 85
+          },
+          "market_cap": {
+            "cohort_n": 85,
+            "median_lag_minutes": null,
+            "median_multiple_from_same_kind_admission": null,
+            "observed": 0,
+            "observed_rate": 0.0,
+            "track_n": 21
+          }
+        }
+      },
+      "comparable_cohort_n": 85,
+      "crossings": {
+        "fdv": {
+          "RAW_C10_CROSSING": {
+            "cohort_n": 85,
+            "crossed": 0,
+            "ever_observed_ge": 0,
+            "ever_observed_rate": 0.0,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 85,
+            "transition_events": 0
+          },
+          "RAW_C1_CROSSING": {
+            "cohort_n": 85,
+            "crossed": 0,
+            "ever_observed_ge": 0,
+            "ever_observed_rate": 0.0,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 85,
+            "transition_events": 0
+          },
+          "RAW_C3_CROSSING": {
+            "cohort_n": 85,
+            "crossed": 0,
+            "ever_observed_ge": 0,
+            "ever_observed_rate": 0.0,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 85,
+            "transition_events": 0
+          }
+        },
+        "market_cap": {
+          "RAW_C10_CROSSING": {
+            "cohort_n": 85,
+            "crossed": 0,
+            "ever_observed_ge": 2,
+            "ever_observed_rate": 0.0952,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 21,
+            "transition_events": 0
+          },
+          "RAW_C1_CROSSING": {
+            "cohort_n": 85,
+            "crossed": 0,
+            "ever_observed_ge": 2,
+            "ever_observed_rate": 0.0952,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 21,
+            "transition_events": 0
+          },
+          "RAW_C3_CROSSING": {
+            "cohort_n": 85,
+            "crossed": 0,
+            "ever_observed_ge": 2,
+            "ever_observed_rate": 0.0952,
+            "latencies_minutes": [],
+            "median_minutes_since_pool_created": null,
+            "observed_rate": 0.0,
+            "track_n": 21,
+            "transition_events": 0
+          }
+        }
+      },
+      "refresh_quality": {
+        "max_missed_slots": 4,
+        "median_missed_slots": 2.0,
+        "tokens_with_missed_slots": 55,
+        "total_missed_slots": 140
+      }
+    }
+  },
+  "cohort_n": 698,
+  "interpretation": {
+    "ath_reconstruction": false,
+    "buy_signal": false,
+    "checkpoint_semantics": "first recorded observation at or after checkpoint; lag is explicit, so this is observability rather than exact-time survival",
+    "denominator": "tracking_cohort members only; incomplete discovery frames are excluded at admission time",
+    "market_cap_fdv_separate": true,
+    "threshold_semantics": "ever_observed_ge uses per-track maximum observation; transition_events require an observed below-to-above transition in the same valuation kind and may be fewer",
+    "uncertainty": "sample fractions and inclusion probabilities are exposed; no formal confidence interval is claimed"
+  },
+  "schema": "mco_lifecycle_report.v1"
+}
