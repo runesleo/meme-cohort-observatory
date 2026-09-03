@@ -140,6 +140,23 @@ def test_inverted_range_returns_empty_without_calling_rpc() -> None:
     assert fake.calls == []
 
 
+class TestRequestBudgetCheck:
+    def test_check_returns_positive_remaining_budget(self) -> None:
+        from meme_cohort_observatory.adapters import RequestBudget
+
+        clock = iter((10.0, 12.5))
+        budget = RequestBudget(max_seconds=5.0, monotonic=lambda: next(clock))
+        assert budget.check() == 2.5
+
+    def test_check_fails_closed_after_deadline(self) -> None:
+        from meme_cohort_observatory.adapters import RequestBudget, SourceError
+
+        clock = iter((10.0, 15.0))
+        budget = RequestBudget(max_seconds=5.0, monotonic=lambda: next(clock))
+        with pytest.raises(SourceError, match="public request budget exhausted"):
+            budget.check()
+
+
 class TestChainLogSources:
     """多链配置的守卫 —— factory 白名单是安全门, 配置错了等于把伪造事件当真。"""
 

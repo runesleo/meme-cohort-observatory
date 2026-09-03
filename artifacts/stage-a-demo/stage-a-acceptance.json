@@ -1,0 +1,67 @@
+{
+  "clean_clone": {
+    "console_script": "mco",
+    "editable_install": true,
+    "elapsed_seconds": 18.182,
+    "full_tests_passed": true,
+    "status": "PASS",
+    "tested_commit": "4eb63e45816ac0057471160b7e347bb57c38c20c"
+  },
+  "date": "2026-09-03",
+  "git": {
+    "deploy": false,
+    "public_repo": false,
+    "push": false,
+    "remote_configured": false
+  },
+  "initial_extraction_commit": "4eb63e45816ac0057471160b7e347bb57c38c20c",
+  "live_source_smoke": {
+    "degradation_preserved_fail_closed": true,
+    "degraded_chains": [
+      "solana"
+    ],
+    "successful_chains": [
+      "bsc",
+      "base"
+    ]
+  },
+  "offline_demo": {
+    "chains": [
+      "base",
+      "bsc",
+      "robinhood",
+      "solana"
+    ],
+    "database_created": true,
+    "doctor_status": "pass",
+    "elapsed_seconds": 0.789,
+    "export_rows": 16,
+    "status": "PASS",
+    "summary_created": true
+  },
+  "open_gates": [
+    "license/provenance review before any public release",
+    "README/demo external-user comprehension test",
+    "one non-author clean-clone run",
+    "Stage B lifecycle report on a non-cherry-picked real cohort",
+    "explicit approval before remote creation, push, release, or hackathon submission"
+  ],
+  "public_surface_audit": {
+    "absolute_private_paths": 0,
+    "embedded_secrets": 0,
+    "result": "PASS",
+    "wallet_or_trade_calls": 0,
+    "wallet_or_trade_imports": 0
+  },
+  "schema": "mco_stage_a_acceptance.v1",
+  "source_baseline_tests": 101,
+  "status": "LOCAL_STAGE_A_COMPLETE_NOT_PUBLIC",
+  "target_test_breakdown": {
+    "test_cli_and_contract.py": 2,
+    "test_collector.py": 55,
+    "test_robinhood_fullchain.py": 28,
+    "test_rpc_log_client.py": 20
+  },
+  "target_tests": 105,
+  "working_name": "meme-cohort-observatory"
+}

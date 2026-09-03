@@ -53,7 +53,7 @@ PYTHONPATH=src python -m meme_cohort_observatory collect       --fixtures tests/
 mco collect --network solana --network bsc --state-dir ./state
 ```
 
-Public collection is GET-only and bounded by per-request and whole-run budgets. A source failure degrades only the affected chain and is retained in coverage evidence.
+Public collection is GET-only and bounded by per-request and whole-run budgets. A source failure degrades only the affected chain and is retained in coverage evidence. First-time RPC bootstrap can take tens of seconds because it resolves the initial block window; the default whole-run budget is intentionally larger than the 60-second offline demo target.
 
 ## Outputs
 

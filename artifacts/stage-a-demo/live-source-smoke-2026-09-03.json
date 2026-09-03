@@ -1,0 +1,49 @@
+{
+  "account_required": false,
+  "bug_found_and_fixed": {
+    "fix": "Added fail-closed RequestBudget.check, reused it from bounded_timeout, and added two regression tests.",
+    "post_fix_behavior": "A 30-second run budget failed closed as budget exhausted; a 90-second budget completed Base bootstrap successfully.",
+    "symptom": "Base first smoke returned AttributeError because RpcLogClient called RequestBudget.check but RequestBudget did not implement it."
+  },
+  "date": "2026-09-03",
+  "interpretation": "Two chains completed successfully. Solana degradation is a provider rate-limit/coverage result, not converted into a success denominator.",
+  "keyless_get_only": true,
+  "runs": {
+    "base": {
+      "block_from": 50823617,
+      "block_to": 50824004,
+      "coverage_scope": "block_range_closed",
+      "discovered_tokens": 2,
+      "errors": [],
+      "latest_indexed_block": 50824068,
+      "pool_events_seen": 1,
+      "pool_rows_seen": 1,
+      "runtime_seconds": 85.543,
+      "status": "success"
+    },
+    "bsc": {
+      "admission_admitted": 5,
+      "admission_dropped": 6,
+      "admission_eligible": 11,
+      "coverage_scope": "watermark_closed",
+      "discovered_tokens": 17,
+      "errors": [],
+      "pool_rows_seen": 20,
+      "runtime_seconds": 14.765,
+      "status": "success"
+    },
+    "solana": {
+      "admission_admitted": 0,
+      "coverage_scope": "pagination_gap",
+      "discovered_tokens": 74,
+      "error": "GeckoTerminal returned HTTP 429 on page 5; incomplete coverage was retained and not admitted as a comparable cohort.",
+      "pool_rows_seen": 80,
+      "runtime_in_combined_bsc_solana_seconds": 14.765,
+      "status": "degraded"
+    }
+  },
+  "schema": "mco_live_source_smoke.v1",
+  "status": "PASS_WITH_DECLARED_DEGRADATION",
+  "trade_surface": false,
+  "wallet_surface": false
+}

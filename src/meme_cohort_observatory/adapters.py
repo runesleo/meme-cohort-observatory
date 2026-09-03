@@ -215,10 +215,15 @@ class RequestBudget:
         self.monotonic = monotonic or time.monotonic
         self.deadline = self.monotonic() + max_seconds
 
-    def bounded_timeout(self, requested):
+    def check(self):
+        """Fail closed once the shared wall-clock budget is exhausted."""
         remaining = self.deadline - self.monotonic()
         if remaining <= 0:
             raise SourceError("public request budget exhausted")
+        return remaining
+
+    def bounded_timeout(self, requested):
+        remaining = self.check()
         return max(0.05, min(float(requested), remaining))
 
     def sleep(self, delay, sleeper):
