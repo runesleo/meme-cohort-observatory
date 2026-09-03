@@ -1,0 +1,15 @@
+[
+  {
+    "chainId": "robinhood",
+    "pairAddress": "pool-rh",
+    "pairCreatedAt": 1783998000000,
+    "baseToken": {"address": "token-rh", "symbol": "RHX"},
+    "quoteToken": {"address": "quote-rh", "symbol": "USDG"},
+    "priceUsd": "0.00025",
+    "marketCap": 250000,
+    "fdv": 250000,
+    "liquidity": {"usd": 85000},
+    "volume": {"h24": 45000},
+    "txns": {"h24": {"buys": 54, "sells": 23}}
+  }
+]

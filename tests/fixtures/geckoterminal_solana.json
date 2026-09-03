@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "solana_pool-sol",
+      "attributes": {
+        "address": "pool-sol",
+        "pool_created_at": "2026-07-14T00:00:00Z",
+        "market_cap_usd": null,
+        "fdv_usd": "180000",
+        "reserve_in_usd": "70000",
+        "volume_usd": {"h24": "60000"},
+        "transactions": {"h24": {"buys": 80, "sells": 31}}
+      },
+      "relationships": {"base_token": {"data": {"id": "solana_token-sol"}}}
+    }
+  ],
+  "included": [
+    {"id": "solana_token-sol", "attributes": {"address": "token-sol"}}
+  ]
+}

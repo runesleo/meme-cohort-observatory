@@ -1,0 +1,25 @@
+{
+  "chains": [
+    "base",
+    "bsc",
+    "robinhood",
+    "solana"
+  ],
+  "commands": [
+    "mco collect --fixtures tests/fixtures --state-dir /tmp/mco-demo --observed-at 2026-07-14T02:00:00Z",
+    "mco report --state-dir /tmp/mco-demo --format markdown",
+    "mco export --state-dir /tmp/mco-demo --format jsonl",
+    "mco doctor --state-dir /tmp/mco-demo --json"
+  ],
+  "database_exists": true,
+  "doctor_status": "pass",
+  "elapsed_seconds": 0.789,
+  "export_rows": 16,
+  "note": "Recorded commands are normalized; the verified run used an isolated temporary directory.",
+  "report_contains_limits": true,
+  "schema": "mco_stage_a_demo.v1",
+  "status": "PASS",
+  "summary_exists": true,
+  "trade_surface": false,
+  "wallet_surface": false
+}

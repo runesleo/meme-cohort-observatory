@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "bsc_pool-bsc",
+      "attributes": {
+        "address": "pool-bsc",
+        "pool_created_at": "2026-07-14T00:10:00Z",
+        "market_cap_usd": "220000",
+        "fdv_usd": "220000",
+        "reserve_in_usd": "91000",
+        "volume_usd": {"h24": "72000"},
+        "transactions": {"h24": {"buys": 90, "sells": 44}}
+      },
+      "relationships": {"base_token": {"data": {"id": "bsc_token-bsc"}}}
+    }
+  ],
+  "included": [
+    {"id": "bsc_token-bsc", "attributes": {"address": "token-bsc"}}
+  ]
+}

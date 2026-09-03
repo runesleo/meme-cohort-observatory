@@ -1,0 +1,397 @@
+{
+  "chains": {
+    "base": {
+      "block_discovery": {
+        "cursor": null,
+        "last_coverage": null,
+        "pending_enrichment_count": 0,
+        "pending_enrichment_max_attempts": 0,
+        "pending_enrichment_oldest_block": null,
+        "pending_enrichment_oldest_last_attempt_at": null,
+        "pending_enrichment_unattempted_count": 0,
+        "recent_pool_events": [],
+        "scope": "chain-wide standard V2/V3/V4 pool events plus registered Pons/NOXA launch events; unknown custom AMMs, private bonding curves and tokens without these events remain out of coverage"
+      },
+      "coverage": {
+        "admission_admitted": 0,
+        "admission_block_reason": "discovery_not_comparable",
+        "admission_bucket": "2026-07-14T02:00Z",
+        "admission_dropped": 0,
+        "admission_eligible": 0,
+        "admission_frame_complete": false,
+        "admission_inclusion_probability": 0.0,
+        "admission_policy_version": "c100_admission_v1",
+        "admission_sample_fraction": 0.0,
+        "candidate_scope": "unfiltered_new_pools",
+        "coverage_scope": "fixture_snapshot",
+        "discovered_tokens": 1,
+        "discovery_observations_written": 1,
+        "discovery_status": "success",
+        "discovery_type": "unfiltered_new_pools",
+        "errors": [],
+        "gap_reason": null,
+        "last_run_at": "2026-07-14T02:00:00Z",
+        "missing_fields": [],
+        "newest_pool_created_at": "2026-07-14T00:05:00Z",
+        "observations_written": 1,
+        "oldest_pool_created_at": "2026-07-14T00:05:00Z",
+        "page_count": 1,
+        "pool_rows_seen": 1,
+        "refresh_complete": true,
+        "refresh_deferred": 0,
+        "refresh_eligible_due": 0,
+        "refresh_errors": 0,
+        "refresh_refreshed": 0,
+        "refresh_returned": 0,
+        "refresh_scope": "tracking_cohort_anchored_age_tiered_v2_hard_cap_300",
+        "refresh_selected": 0,
+        "refresh_usable": 0,
+        "status": "success",
+        "tracking_observations_written": 0,
+        "tracking_status": "not_due",
+        "watermark_at": null
+      },
+      "eligible_cohort_count": 0,
+      "first_seen_high_watch_refresh_status": "pending_bounded_queue",
+      "first_valuation_provenance": {
+        "market_cap": 1
+      },
+      "last_successful_observation": "2026-07-14T02:00:00Z",
+      "latest_observation_at": "2026-07-14T02:00:00Z",
+      "qualification_status": "pending_history_and_execution_checks",
+      "valuation_headlines": {
+        "fdv_proxy": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        },
+        "observed_market_cap": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 1
+        },
+        "unknown": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        }
+      }
+    },
+    "bsc": {
+      "block_discovery": {
+        "cursor": null,
+        "last_coverage": null,
+        "pending_enrichment_count": 0,
+        "pending_enrichment_max_attempts": 0,
+        "pending_enrichment_oldest_block": null,
+        "pending_enrichment_oldest_last_attempt_at": null,
+        "pending_enrichment_unattempted_count": 0,
+        "recent_pool_events": [],
+        "scope": "chain-wide standard V2/V3/V4 pool events plus registered Pons/NOXA launch events; unknown custom AMMs, private bonding curves and tokens without these events remain out of coverage"
+      },
+      "coverage": {
+        "admission_admitted": 0,
+        "admission_block_reason": "discovery_not_comparable",
+        "admission_bucket": "2026-07-14T02:00Z",
+        "admission_dropped": 0,
+        "admission_eligible": 0,
+        "admission_frame_complete": false,
+        "admission_inclusion_probability": 0.0,
+        "admission_policy_version": "c100_admission_v1",
+        "admission_sample_fraction": 0.0,
+        "candidate_scope": "unfiltered_new_pools",
+        "coverage_scope": "fixture_snapshot",
+        "discovered_tokens": 1,
+        "discovery_observations_written": 1,
+        "discovery_status": "success",
+        "discovery_type": "unfiltered_new_pools",
+        "errors": [],
+        "gap_reason": null,
+        "last_run_at": "2026-07-14T02:00:00Z",
+        "missing_fields": [],
+        "newest_pool_created_at": "2026-07-14T00:10:00Z",
+        "observations_written": 1,
+        "oldest_pool_created_at": "2026-07-14T00:10:00Z",
+        "page_count": 1,
+        "pool_rows_seen": 1,
+        "refresh_complete": true,
+        "refresh_deferred": 0,
+        "refresh_eligible_due": 0,
+        "refresh_errors": 0,
+        "refresh_refreshed": 0,
+        "refresh_returned": 0,
+        "refresh_scope": "tracking_cohort_anchored_age_tiered_v2_hard_cap_300",
+        "refresh_selected": 0,
+        "refresh_usable": 0,
+        "status": "success",
+        "tracking_observations_written": 0,
+        "tracking_status": "not_due",
+        "watermark_at": null
+      },
+      "eligible_cohort_count": 0,
+      "first_seen_high_watch_refresh_status": "pending_bounded_queue",
+      "first_valuation_provenance": {
+        "market_cap": 1
+      },
+      "last_successful_observation": "2026-07-14T02:00:00Z",
+      "latest_observation_at": "2026-07-14T02:00:00Z",
+      "qualification_status": "pending_history_and_execution_checks",
+      "valuation_headlines": {
+        "fdv_proxy": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        },
+        "observed_market_cap": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 1
+        },
+        "unknown": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        }
+      }
+    },
+    "robinhood": {
+      "block_discovery": {
+        "cursor": null,
+        "last_coverage": null,
+        "pending_enrichment_count": 0,
+        "pending_enrichment_max_attempts": 0,
+        "pending_enrichment_oldest_block": null,
+        "pending_enrichment_oldest_last_attempt_at": null,
+        "pending_enrichment_unattempted_count": 0,
+        "recent_pool_events": [],
+        "scope": "chain-wide standard V2/V3/V4 pool events plus registered Pons/NOXA launch events; unknown custom AMMs, private bonding curves and tokens without these events remain out of coverage"
+      },
+      "coverage": {
+        "admission_admitted": 0,
+        "admission_block_reason": "discovery_not_comparable",
+        "admission_bucket": "2026-07-14T02:00Z",
+        "admission_dropped": 0,
+        "admission_eligible": 0,
+        "admission_frame_complete": false,
+        "admission_inclusion_probability": 0.0,
+        "admission_policy_version": "c100_admission_v1",
+        "admission_sample_fraction": 0.0,
+        "candidate_scope": "promoted_subset",
+        "coverage_scope": "promoted_subset",
+        "discovered_tokens": 1,
+        "discovery_observations_written": 1,
+        "discovery_status": "degraded",
+        "discovery_type": "promoted_subset",
+        "errors": [],
+        "gap_reason": "discovery_endpoint_is_promoted_only",
+        "last_run_at": "2026-07-14T02:00:00Z",
+        "missing_fields": [],
+        "newest_pool_created_at": "2026-07-14T03:00:00Z",
+        "observations_written": 1,
+        "oldest_pool_created_at": "2026-07-14T03:00:00Z",
+        "page_count": 1,
+        "pool_rows_seen": 1,
+        "refresh_complete": true,
+        "refresh_deferred": 0,
+        "refresh_eligible_due": 0,
+        "refresh_errors": 0,
+        "refresh_refreshed": 0,
+        "refresh_returned": 0,
+        "refresh_scope": "tracking_cohort_anchored_age_tiered_v2_hard_cap_300",
+        "refresh_selected": 0,
+        "refresh_usable": 0,
+        "status": "degraded",
+        "tracking_observations_written": 0,
+        "tracking_status": "not_due",
+        "watermark_at": null
+      },
+      "eligible_cohort_count": 0,
+      "first_seen_high_watch_refresh_status": "pending_bounded_queue",
+      "first_valuation_provenance": {
+        "market_cap": 1
+      },
+      "last_successful_observation": null,
+      "latest_observation_at": "2026-07-14T02:00:00Z",
+      "qualification_status": "pending_history_and_execution_checks",
+      "valuation_headlines": {
+        "fdv_proxy": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        },
+        "observed_market_cap": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 1
+        },
+        "unknown": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        }
+      }
+    },
+    "solana": {
+      "block_discovery": {
+        "cursor": null,
+        "last_coverage": null,
+        "pending_enrichment_count": 0,
+        "pending_enrichment_max_attempts": 0,
+        "pending_enrichment_oldest_block": null,
+        "pending_enrichment_oldest_last_attempt_at": null,
+        "pending_enrichment_unattempted_count": 0,
+        "recent_pool_events": [],
+        "scope": "chain-wide standard V2/V3/V4 pool events plus registered Pons/NOXA launch events; unknown custom AMMs, private bonding curves and tokens without these events remain out of coverage"
+      },
+      "coverage": {
+        "admission_admitted": 0,
+        "admission_block_reason": "discovery_not_comparable",
+        "admission_bucket": "2026-07-14T02:00Z",
+        "admission_dropped": 0,
+        "admission_eligible": 0,
+        "admission_frame_complete": false,
+        "admission_inclusion_probability": 0.0,
+        "admission_policy_version": "c100_admission_v1",
+        "admission_sample_fraction": 0.0,
+        "candidate_scope": "unfiltered_new_pools",
+        "coverage_scope": "fixture_snapshot",
+        "discovered_tokens": 1,
+        "discovery_observations_written": 1,
+        "discovery_status": "success",
+        "discovery_type": "unfiltered_new_pools",
+        "errors": [],
+        "gap_reason": null,
+        "last_run_at": "2026-07-14T02:00:00Z",
+        "missing_fields": [],
+        "newest_pool_created_at": "2026-07-14T00:00:00Z",
+        "observations_written": 1,
+        "oldest_pool_created_at": "2026-07-14T00:00:00Z",
+        "page_count": 1,
+        "pool_rows_seen": 1,
+        "refresh_complete": true,
+        "refresh_deferred": 0,
+        "refresh_eligible_due": 0,
+        "refresh_errors": 0,
+        "refresh_refreshed": 0,
+        "refresh_returned": 0,
+        "refresh_scope": "tracking_cohort_anchored_age_tiered_v2_hard_cap_300",
+        "refresh_selected": 0,
+        "refresh_usable": 0,
+        "status": "success",
+        "tracking_observations_written": 0,
+        "tracking_status": "not_due",
+        "watermark_at": null
+      },
+      "eligible_cohort_count": 0,
+      "first_seen_high_watch_refresh_status": "pending_bounded_queue",
+      "first_valuation_provenance": {
+        "fdv": 1
+      },
+      "last_successful_observation": "2026-07-14T02:00:00Z",
+      "latest_observation_at": "2026-07-14T02:00:00Z",
+      "qualification_status": "pending_history_and_execution_checks",
+      "valuation_headlines": {
+        "fdv_proxy": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 1
+        },
+        "observed_market_cap": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        },
+        "unknown": {
+          "first_seen_high": {},
+          "raw_threshold_crossings": {
+            "RAW_C100_CROSSING": 0,
+            "RAW_C10_CROSSING": 0,
+            "RAW_C1_CROSSING": 0,
+            "RAW_C3_CROSSING": 0
+          },
+          "token_count": 0
+        }
+      }
+    }
+  },
+  "eligible_cohort_count": 0,
+  "executability_status": "unmeasured",
+  "generated_at": "2026-09-03T12:04:41.722782Z",
+  "main_chain_score_missing_gates": [
+    "age_window",
+    "hold_duration",
+    "security",
+    "executability",
+    "full_discovery_coverage",
+    "admission_frame_complete",
+    "complete_refresh_coverage",
+    "sampling_uncertainty",
+    "first_seen_high_watch_refresh",
+    "meme_classification",
+    "token_origin",
+    "organic_maker_checks",
+    "mature_forward_returns",
+    "phase2_14d_30d_tracking"
+  ],
+  "main_chain_score_reason": "Observed reach under the declared sampled-cohort cadence is separated by provider market cap and FDV proxy; complete block-event discovery, valuation enrichment, tracking, sampling uncertainty, origin, meme classification, security, execution, hold-duration, and mature-cohort gates remain open.",
+  "main_chain_score_status": "insufficient_sample",
+  "qualification_status": "pending_history_and_execution_checks",
+  "schema_version": 5,
+  "security_status": "unmeasured",
+  "tracking_scope": "phase1 telemetry through day 7; C3<=14d and C10<=30d remain unavailable until phase2 tracking is implemented"
+}

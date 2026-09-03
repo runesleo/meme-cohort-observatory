@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "configured_networks": [
+      "base",
+      "bsc",
+      "robinhood",
+      "solana"
+    ],
+    "database_exists": true,
+    "python_supported": true,
+    "read_only_public_sources": true,
+    "runtime_dependency_count": 0,
+    "state_dir": "/private/var/folders/t6/1g73b2xn7gz5yhb4b6plxdj00000gp/T/mco-stagea-demo-7zg0uo_z/state",
+    "state_dir_exists": true,
+    "summary_exists": true,
+    "trade_surface": false,
+    "wallet_surface": false
+  },
+  "python": "3.14.6",
+  "status": "pass"
+}
