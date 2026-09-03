@@ -75,3 +75,10 @@ def test_public_surface_has_no_private_path_or_execution_surface():
             elif isinstance(node, ast.Call):
                 target = node.func.attr if isinstance(node.func, ast.Attribute) else node.func.id if isinstance(node.func, ast.Name) else None
                 assert target not in forbidden_calls
+
+
+def test_root_help_lists_all_public_commands():
+    result = run_mco("--help")
+    assert result.returncode == 0, result.stderr
+    for command in ("collect", "report", "export", "inspect-token", "doctor"):
+        assert command in result.stdout

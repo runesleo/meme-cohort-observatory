@@ -85,6 +85,17 @@ mco inspect-token bsc 0x... --state-dir ./state --format markdown
 
 Checkpoint rows are **observability**, not exact-time survival estimates: if the first 1h observation arrived 17 minutes late, the report says so. Likewise, a token whose valuation track first appears above $1M can count as `ever observed >= $1M` without fabricating a below-to-above crossing time.
 
+
+## Why this is not another meme scanner
+
+MCO does not rank tokens. It preserves the **research denominator**.
+
+In one fixed forward BSC cohort, the first five admitted tokens were selected chronologically before a later comparison. At the later DexScreener current-snapshot read, all five addresses still returned a pair row, but only one had a positive-liquidity pair and none exposed a usable current valuation. MCO still retained all five original admissions, their admission values, and ten missed anchored refresh slots.
+
+That one case is not a profitability benchmark. It demonstrates the narrower job: a current snapshot can tell you what is readable now; MCO keeps enough provenance to tell you what population you started with and where follow-up evidence went missing.
+
+The same distinction appears in the existing historical research state: a token can be *ever observed* above a threshold without having an explicit below-to-above transition event. MCO reports those separately instead of inventing a crossing time.
+
 ## Research boundaries
 
 A pool event proves only that a matching public event was observed. It does not prove safe liquidity, token origin, organic demand, executability, or future return. Provider-reported values are telemetry, not independently verified circulating-supply calculations.

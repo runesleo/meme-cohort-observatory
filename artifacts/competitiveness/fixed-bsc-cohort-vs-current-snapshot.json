@@ -1,0 +1,36 @@
+{
+  "conclusion": "The advantage demonstrated by this case is data-quality/provenance and denominator preservation, not token selection or profitability.",
+  "mco": {
+    "admission_values_retained": 5,
+    "behavior": "retains all cohort members and missingness rather than reducing the population to currently readable tokens",
+    "followup_returned": 2,
+    "followup_selected": 5,
+    "followup_usable": 1,
+    "missed_slots_per_member": 2,
+    "retained_cohort_n": 5,
+    "total_missed_slots": 10
+  },
+  "naive_current_snapshot": {
+    "capabilities": [
+      "current pair rows",
+      "current liquidity when present",
+      "current valuation when present"
+    ],
+    "missing": [
+      "admission provenance",
+      "comparable cohort denominator",
+      "historical observations",
+      "missed refresh accounting",
+      "threshold transition provenance"
+    ],
+    "pair_rows_returned": 5,
+    "source": "DexScreener tokens/v1",
+    "tokens_with_any_pair": 5,
+    "tokens_with_positive_pair": 1,
+    "tokens_with_usable_current_valuation": 0
+  },
+  "schema": "mco_fixed_case.v1",
+  "selected_n": 5,
+  "selection": "first five chronological BSC tracking_cohort members admitted in the 2026-09-03 forward smoke; fixed before current-snapshot comparison",
+  "trade_authorized": false
+}

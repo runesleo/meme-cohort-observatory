@@ -1,0 +1,113 @@
+{
+  "reviewed_at": "2026-09-03",
+  "rows": [
+    {
+      "category": "raw current market API",
+      "cohort_sampling_with_inclusion_probability": false,
+      "coverage_denominator_semantics": false,
+      "missed_slot_accounting": false,
+      "multi_chain": true,
+      "new_pool_or_pair_data": true,
+      "notes": "Strong raw pair/current market surface; pair rows include liquidity, FDV, marketCap, pairCreatedAt. MCO consumes this class of source rather than competing as another API wrapper.",
+      "offline_replay": false,
+      "reorg_provenance": false,
+      "risk_or_ai_score": false,
+      "surface": "DexScreener API",
+      "survival_or_lifecycle_research": false
+    },
+    {
+      "category": "raw current/onchain DEX API",
+      "cohort_sampling_with_inclusion_probability": false,
+      "coverage_denominator_semantics": false,
+      "missed_slot_accounting": false,
+      "multi_chain": true,
+      "new_pool_or_pair_data": true,
+      "notes": "New-pools, pool/trade/OHLCV data; public rate/freshness constraints. MCO adds sampling/coverage/history semantics.",
+      "offline_replay": false,
+      "reorg_provenance": false,
+      "risk_or_ai_score": false,
+      "surface": "GeckoTerminal Public API",
+      "survival_or_lifecycle_research": false
+    },
+    {
+      "category": "meme scanner/dashboard",
+      "cohort_sampling_with_inclusion_probability": "not_documented_in_reviewed_README",
+      "coverage_denominator_semantics": "not_documented_in_reviewed_README",
+      "missed_slot_accounting": "not_documented_in_reviewed_README",
+      "multi_chain": true,
+      "new_pool_or_pair_data": true,
+      "notes": "Much stronger than MCO on dashboard, AI scoring, holder/trader/social enrichment, reports and alerts. MCO should not compete on scanner UX.",
+      "offline_replay": "not_reviewed",
+      "reorg_provenance": "not_documented_in_reviewed_README",
+      "risk_or_ai_score": true,
+      "surface": "Robinhood Memescan",
+      "survival_or_lifecycle_research": "not_reviewed"
+    },
+    {
+      "category": "risk/opportunity scanner",
+      "cohort_sampling_with_inclusion_probability": "not_documented_in_reviewed_README",
+      "coverage_denominator_semantics": "not_documented_in_reviewed_README",
+      "missed_slot_accounting": "not_documented_in_reviewed_README",
+      "multi_chain": true,
+      "new_pool_or_pair_data": true,
+      "notes": "Stronger on contract/holder/liquidity/trading risk, scoring, alerts and API.",
+      "offline_replay": "not_reviewed",
+      "reorg_provenance": "not_documented_in_reviewed_README",
+      "risk_or_ai_score": true,
+      "surface": "meme-coin-monitor",
+      "survival_or_lifecycle_research": "historical_pattern_learning"
+    },
+    {
+      "category": "large-scale SQL analytics",
+      "cohort_sampling_with_inclusion_probability": "varies_by_query",
+      "coverage_denominator_semantics": "query_specific",
+      "missed_slot_accounting": "not_typical_dashboard_surface",
+      "multi_chain": "varies_by_query",
+      "new_pool_or_pair_data": true,
+      "notes": "Launch/graduation/survival analytics is already crowded; MCO cannot claim lifecycle charts alone as moat.",
+      "offline_replay": false,
+      "reorg_provenance": "platform_specific",
+      "risk_or_ai_score": "varies",
+      "surface": "Dune Pump.fun analytics",
+      "survival_or_lifecycle_research": true
+    },
+    {
+      "category": "large-scale research",
+      "cohort_sampling_with_inclusion_probability": false,
+      "coverage_denominator_semantics": "methodology_specific",
+      "missed_slot_accounting": false,
+      "multi_chain": false,
+      "new_pool_or_pair_data": false,
+      "notes": "18.67M-token study shows incumbents dominate scale; MCO must win on reproducible methodology/local research workflow, not sample size.",
+      "offline_replay": false,
+      "reorg_provenance": false,
+      "risk_or_ai_score": false,
+      "surface": "CoinGecko Pump.fun lifespan research",
+      "survival_or_lifecycle_research": true
+    },
+    {
+      "category": "coverage-aware cohort research CLI",
+      "cohort_sampling_with_inclusion_probability": true,
+      "coverage_denominator_semantics": true,
+      "missed_slot_accounting": true,
+      "multi_chain": true,
+      "new_pool_or_pair_data": true,
+      "notes": "Deliberately weaker on alpha scoring/UI/alerts. Differentiator is reproducible cohort admission + missingness/provenance + lifecycle semantics.",
+      "offline_replay": true,
+      "reorg_provenance": "implemented_for_supported_event-source path",
+      "risk_or_ai_score": false,
+      "surface": "Meme Cohort Observatory",
+      "survival_or_lifecycle_research": true
+    }
+  ],
+  "schema": "mco_competitor_matrix.v1",
+  "scope": "publicly documented surfaces only; undocumented features are marked not reviewed, not asserted absent",
+  "sources": [
+    "https://docs.dexscreener.com/api/reference",
+    "https://api.geckoterminal.com/docs/index.html",
+    "https://github.com/openclawby/Robinhood_Memescan",
+    "https://github.com/sudokatie/meme-coin-monitor",
+    "https://dune.com/discover/content/trending?q=tags%3APump.Fun&resource-type=dashboards",
+    "https://www.coingecko.com/research/publications/average-lifespan-of-pumpfun-tokens"
+  ]
+}

@@ -128,8 +128,9 @@ def run_collect(args):
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    # Preserve the old collector.py calling shape for internal migration tests.
-    if argv and argv[0].startswith("-"):
+    # Preserve the old collector.py calling shape for internal migration tests,
+    # but keep root help as root help so users can discover all commands.
+    if argv and argv[0].startswith("-") and argv[0] not in {"-h", "--help"}:
         argv.insert(0, "collect")
     args = build_parser().parse_args(argv)
     try:
