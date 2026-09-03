@@ -61,7 +61,7 @@ def _display(value) -> str:
     return str(value)
 
 
-def render_markdown(summary: dict) -> str:
+def render_markdown(summary: dict, lifecycle: dict | None = None) -> str:
     lines = [
         "# Launch Cohort Report",
         "",
@@ -99,11 +99,41 @@ def render_markdown(summary: dict) -> str:
     )
     if caveats:
         lines.extend(["", "## Coverage caveats", "", *caveats])
+    if lifecycle is not None:
+        lines.extend(["", "## Comparable cohort lifecycle", ""])
+        if not lifecycle.get("chains"):
+            lines.append("No comparable cohort members yet.")
+        for chain, item in sorted(lifecycle.get("chains", {}).items()):
+            c1 = item["crossings"]["market_cap"]["RAW_C1_CROSSING"]
+            fdv_c1 = item["crossings"]["fdv"]["RAW_C1_CROSSING"]
+            lines.extend([
+                f"### {chain}",
+                "",
+                f"- comparable cohort: `{item['comparable_cohort_n']}`",
+                f"- MCAP ever observed ≥$1M: `{c1['ever_observed_ge']}/{c1['track_n']}` tracked; explicit transitions=`{c1['transition_events']}`; median transition pool-age=`{_display(c1['median_minutes_since_pool_created'])}` minutes",
+                f"- FDV ever observed ≥$1M: `{fdv_c1['ever_observed_ge']}/{fdv_c1['track_n']}` tracked; explicit transitions=`{fdv_c1['transition_events']}`; median transition pool-age=`{_display(fdv_c1['median_minutes_since_pool_created'])}` minutes",
+                f"- missed refresh slots: `{item['refresh_quality']['total_missed_slots']}` across `{item['refresh_quality']['tokens_with_missed_slots']}` tokens",
+                f"- median inclusion probability: `{_display(item['admission']['inclusion_probability_median'])}`; formal CI: `not claimed`",
+                "",
+                "| Checkpoint | MCAP observed | Median lag min | Median multiple | FDV observed |",
+                "|---|---:|---:|---:|---:|",
+            ])
+            for label in ("10m", "1h", "1d", "7d"):
+                m = item["checkpoints"][label]["market_cap"]
+                f = item["checkpoints"][label]["fdv"]
+                lines.append(
+                    f"| {label} | {m['observed']}/{m['track_n']} | {_display(m['median_lag_minutes'])} | "
+                    f"{_display(m['median_multiple_from_same_kind_admission'])} | {f['observed']}/{f['track_n']} |"
+                )
+        lines.extend([
+            "",
+            "Lifecycle checkpoints mean first recorded observation at-or-after target age; lag is explicit. They are not exact-time survival estimates.",
+        ])
     return "\n".join(lines) + "\n"
 
 
-def render_table(summary: dict) -> str:
-    headers = ["chain", "status", "coverage", "complete", "seen", "admit", "drop", "mcap>=1m"]
+def render_table(summary: dict, lifecycle: dict | None = None) -> str:
+    headers = ["chain", "status", "coverage", "complete", "seen", "admit", "drop", "mcap_C1evt", "fdv_C1evt"]
     data = []
     for row in report_rows(summary):
         data.append(
@@ -116,6 +146,7 @@ def render_table(summary: dict) -> str:
                 _display(row["admitted"]),
                 _display(row["dropped"]),
                 _display(row["mcap_c1"]),
+                _display(row["fdv_c1"]),
             ]
         )
     widths = [len(header) for header in headers]
@@ -133,14 +164,38 @@ def render_table(summary: dict) -> str:
         f"security={_display(summary.get('security_status'))}; "
         f"executability={_display(summary.get('executability_status'))}"
     )
+    if lifecycle is not None and lifecycle.get("chains"):
+        output.extend(["", "lifecycle (comparable cohort only):"])
+        for chain, item in sorted(lifecycle["chains"].items()):
+            c1 = item["crossings"]["market_cap"]["RAW_C1_CROSSING"]
+            fdv_c1 = item["crossings"]["fdv"]["RAW_C1_CROSSING"]
+            mcap_checkpoints = "/".join(
+                f"{label}:{item['checkpoints'][label]['market_cap']['observed']}/{item['checkpoints'][label]['market_cap']['track_n']}"
+                for label in ("10m", "1h", "1d", "7d")
+            )
+            fdv_checkpoints = "/".join(
+                f"{label}:{item['checkpoints'][label]['fdv']['observed']}/{item['checkpoints'][label]['fdv']['track_n']}"
+                for label in ("10m", "1h", "1d", "7d")
+            )
+            output.append(
+                f"{chain}: n={item['comparable_cohort_n']} "
+                f"mcap>=1m={c1['ever_observed_ge']}/{c1['track_n']}tracked(evt={c1['transition_events']}) "
+                f"fdv>=1m={fdv_c1['ever_observed_ge']}/{fdv_c1['track_n']}tracked(evt={fdv_c1['transition_events']}) "
+                f"median_mcap_t1m={_display(c1['median_minutes_since_pool_created'])}m "
+                f"mcap_cp={mcap_checkpoints} fdv_cp={fdv_checkpoints} "
+                f"missed_slots={item['refresh_quality']['total_missed_slots']}"
+            )
     return "\n".join(output) + "\n"
 
 
-def render_report(summary: dict, format_name: str) -> str:
+def render_report(summary: dict, format_name: str, lifecycle: dict | None = None) -> str:
     if format_name == "markdown":
-        return render_markdown(summary)
+        return render_markdown(summary, lifecycle)
     if format_name == "table":
-        return render_table(summary)
+        return render_table(summary, lifecycle)
     if format_name == "json":
-        return json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+        payload = dict(summary)
+        if lifecycle is not None:
+            payload["lifecycle"] = lifecycle
+        return json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     raise ValueError(f"unsupported report format: {format_name}")

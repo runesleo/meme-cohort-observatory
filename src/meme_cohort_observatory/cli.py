@@ -18,6 +18,7 @@ from .adapters import (
 from .cohort import collect_once
 from .doctor import render_doctor
 from .exporting import export_state
+from .lifecycle import build_lifecycle_report, inspect_token, render_token_path
 from .reporting import load_summary, render_report
 from .runtime_lock import SingleInstanceLock
 from .store import CohortStore
@@ -72,6 +73,13 @@ def build_parser():
     export.add_argument("--format", choices=("jsonl", "json"), default="jsonl")
     export.add_argument("--table", action="append", dest="tables")
     export.add_argument("--output", help="write to a file instead of stdout")
+
+    inspect = commands.add_parser("inspect-token", help="inspect one token's recorded cohort lifecycle")
+    _add_state_dir(inspect)
+    inspect.add_argument("chain")
+    inspect.add_argument("token_address")
+    inspect.add_argument("--format", choices=("markdown", "json"), default="markdown")
+    inspect.add_argument("--output", help="write to a file instead of stdout")
 
     doctor = commands.add_parser("doctor", help="run non-network safety and local-state checks")
     doctor.add_argument("--state-dir")
@@ -128,10 +136,15 @@ def main(argv=None):
         if args.command == "collect":
             return run_collect(args)
         if args.command == "report":
-            _write_output(render_report(load_summary(args.state_dir), args.format), args.output)
+            lifecycle = build_lifecycle_report(args.state_dir)
+            _write_output(render_report(load_summary(args.state_dir), args.format, lifecycle), args.output)
             return 0
         if args.command == "export":
             _write_output(export_state(args.state_dir, args.format, args.tables), args.output)
+            return 0
+        if args.command == "inspect-token":
+            payload = inspect_token(args.state_dir, args.chain, args.token_address)
+            _write_output(render_token_path(payload, args.format), args.output)
             return 0
         if args.command == "doctor":
             sys.stdout.write(render_doctor(args.state_dir, args.as_json))
