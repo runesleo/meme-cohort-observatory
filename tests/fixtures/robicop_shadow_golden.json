@@ -1,0 +1,112 @@
+{
+  "schema": "mco_robicop_shadow_golden_fixture.v1",
+  "fixture_semantics_only": true,
+  "note": "Synthetic payloads for semantic regression. Addresses are fixtures and are not claims about real wallets or tokens.",
+  "cases": [
+    {
+      "case_id": "avoid_then_failed",
+      "chain": "robinhood",
+      "token_address": "0x1111111111111111111111111111111111111111",
+      "observed_at": "2026-09-09T00:00:00Z",
+      "canonical_outcome": "failed",
+      "robicop": {
+        "verdict": "avoid",
+        "reason": "1 booked wallet(s) traded this coin",
+        "booked_wallets": [
+          {
+            "address": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "classification": "rugger",
+            "coin_count": 4,
+            "proof_tx": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "note": "absence of a record is not a clearance"
+      }
+    },
+    {
+      "case_id": "avoid_then_active",
+      "chain": "robinhood",
+      "token_address": "0x2222222222222222222222222222222222222222",
+      "observed_at": "2026-09-09T00:01:00Z",
+      "canonical_outcome": "active",
+      "robicop": {
+        "verdict": "avoid",
+        "booked_wallets": [
+          {
+            "address": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "classification": "one-clipper",
+            "coin_count": 7,
+            "proof_tx": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "caution_then_deteriorated",
+      "chain": "robinhood",
+      "token_address": "0x3333333333333333333333333333333333333333",
+      "observed_at": "2026-09-09T00:02:00Z",
+      "canonical_outcome": "deteriorated",
+      "robicop": {
+        "verdict": "caution",
+        "booked_wallets": [
+          {
+            "address": "0xcccccccccccccccccccccccccccccccccccccccc",
+            "classification": "sniper",
+            "coin_count": 3,
+            "proof_tx": "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "clear_then_failed_proves_no_clearance",
+      "chain": "robinhood",
+      "token_address": "0x4444444444444444444444444444444444444444",
+      "observed_at": "2026-09-09T00:03:00Z",
+      "canonical_outcome": "failed",
+      "robicop": {
+        "verdict": "clear",
+        "booked_wallets": [],
+        "note": "absence of a record is not a clearance"
+      }
+    },
+    {
+      "case_id": "clear_then_active_non_disconfirming",
+      "chain": "robinhood",
+      "token_address": "0x5555555555555555555555555555555555555555",
+      "observed_at": "2026-09-09T00:04:00Z",
+      "canonical_outcome": "active",
+      "robicop": {
+        "verdict": "clear",
+        "booked_wallets": []
+      }
+    },
+    {
+      "case_id": "source_unavailable",
+      "chain": "robinhood",
+      "token_address": "0x6666666666666666666666666666666666666666",
+      "observed_at": "2026-09-09T00:05:00Z",
+      "canonical_outcome": "failed",
+      "source_error": "fixture timeout",
+      "robicop": null
+    },
+    {
+      "case_id": "clear_with_wallet_is_inconsistent",
+      "chain": "robinhood",
+      "token_address": "0x7777777777777777777777777777777777777777",
+      "observed_at": "2026-09-09T00:06:00Z",
+      "canonical_outcome": "active",
+      "robicop": {
+        "verdict": "clear",
+        "booked_wallets": [
+          {
+            "address": "0xdddddddddddddddddddddddddddddddddddddddd",
+            "classification": "rugger",
+            "proof_tx": "0xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ]
+      }
+    }
+  ]
+}
